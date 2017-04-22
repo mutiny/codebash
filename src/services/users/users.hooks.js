@@ -1,6 +1,6 @@
-const { authenticate } = require('feathers-authentication').hooks;
-const commonHooks = require('feathers-hooks-common');
-const { restrictToOwner } = require('feathers-authentication-hooks');
+const { authenticate } = require('feathers-authentication').hooks
+const commonHooks = require('feathers-hooks-common')
+const { restrictToOwner } = require('feathers-authentication-hooks')
 
 const restrict = [
   authenticate('jwt'),
@@ -8,7 +8,7 @@ const restrict = [
     idField: '_id',
     ownerField: '_id'
   })
-];
+]
 
 module.exports = {
   before: {
@@ -45,4 +45,4 @@ module.exports = {
     patch: [],
     remove: []
   }
-};
+}

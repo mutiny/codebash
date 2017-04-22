@@ -24,7 +24,8 @@
     "yarn": ">= 0.18.0"
   },
   "scripts": {
-    "test": "yarn run standard",
+    "test": "yarn run standard --env mocha && yarn run mocha",
+    "lint": "yarn run standard --env mocha --fix",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
   },
