@@ -5,12 +5,15 @@
   "homepage": "",
   "main": "src",
   "keywords": [
-    "feathers"
+    "coding",
+    "challenges",
+    "real-time",
+    "multiplayer"
   ],
   "author": {
-    "name": "Robin Ury",
-    "email": "r.ury@tuta.io"
+    "name": "Team Mutiny"
   },
+  "repository":  "mutiny/codebash",
   "contributors": [],
   "bugs": {},
   "directories": {
