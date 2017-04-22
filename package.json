@@ -21,7 +21,7 @@
     "yarn": ">= 0.18.0"
   },
   "scripts": {
-    "test": "xo && npm run eslint && npm run mocha",
+    "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
@@ -31,6 +31,7 @@
     "compression": "^1.6.2",
     "cors": "^2.8.3",
     "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
     "feathers": "^2.1.1",
     "feathers-configuration": "^0.4.1",
     "feathers-errors": "^2.6.3",
