@@ -13,7 +13,7 @@
   "author": {
     "name": "Team Mutiny"
   },
-  "repository":  "mutiny/codebash",
+  "repository": "mutiny/codebash",
   "contributors": [],
   "bugs": {},
   "directories": {
@@ -47,8 +47,8 @@
     "feathers-rest": "^1.7.2",
     "feathers-socketio": "^1.6.0",
     "helmet": "^3.5.0",
-    "mocha": "^3.2.0",
-    "nedb": "^1.8.0",
+    "mocha": "^3.3.0",
+    "mongodb": "^2.2.26",
     "request": "^2.81.0",
     "request-promise": "^4.2.0",
     "serve-favicon": "^2.4.2",
@@ -58,6 +58,8 @@
     "standard": "^10.0.2"
   },
   "standard": {
-    "env": [ "mocha" ]
+    "env": [
+      "mocha"
+    ]
   }
 }

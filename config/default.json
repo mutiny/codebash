@@ -5,24 +5,5 @@
   "paginate": {
     "default": 10,
     "max": 50
-  },
-  "nedb": "../data",
-  "authentication": {
-    "secret": "5c63baf2949b4ca76e95a24e8c7f42669a5edbba36750bdb8735f1ab3466cb40f5800d458ec3814f82b2a48ab76569bc9ee0a56c324b66c7fe04a4ea595b9f869d60909086bcb86863537df3665cee3dd23035eb07cad9b838f0a174e4a9a7b5c2d142961377116414f2c4b0baa726ae994b476b19ff8f1e1f488fa24b3b30359a81fa599d95ea76fecc1a7b8aa575cdde236ad17839c1535c0ddee85b82d69c551633b01c72c45729984ef6433472b2d78229e5e238e4bc027e3b6c79b0408d0cb7a3bb065f486bb5d4213a1558b8c2518d432d25a3ba4e496eac8bcf90208c4d1e8607b503c00e4f086ed4f29ea42785b03501778c218b81f784e56ea707d9",
-    "strategies": [
-      "jwt"
-    ],
-    "path": "/authentication",
-    "service": "users",
-    "jwt": {
-      "header": {
-        "type": "access"
-      },
-      "audience": "https://yourdomain.com",
-      "subject": "anonymous",
-      "issuer": "feathers",
-      "algorithm": "HS256",
-      "expiresIn": "1d"
-    }
   }
 }
