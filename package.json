@@ -25,7 +25,7 @@
   },
   "scripts": {
     "test": "yarn run standard --env mocha && yarn run mocha",
-    "lint": "yarn run standard --env mocha --fix",
+    "lint": "yarn run standard --fix --env mocha ",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
   },
@@ -43,6 +43,7 @@
     "feathers-errors": "^2.6.3",
     "feathers-hooks": "^2.0.0",
     "feathers-hooks-common": "^3.0.0",
+    "feathers-mongodb": "^2.8.0",
     "feathers-nedb": "^2.6.2",
     "feathers-rest": "^1.7.2",
     "feathers-socketio": "^1.6.0",
@@ -59,7 +60,9 @@
   },
   "standard": {
     "env": [
-      "mocha"
+      "mocha",
+      "node",
+      "es6"
     ]
   }
 }
