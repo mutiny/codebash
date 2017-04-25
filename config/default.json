@@ -6,5 +6,23 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://localhost:27017/codebash"
+  "mongodb": "mongodb://localhost:27017/codebash",
+  "authentication": {
+    "secret": "bd52026f556ad7f26fc3b85bffd22723071b404d034d2332384500c6868124efea869d6fd4e69231269c4e70fe63d0180d334a293448eb27081bfa294eb9c5a89c34a26b49f85bb6e29ffec0a93e3a2a9b90b6bcf808edc1c263dc757fca263c49a0931f4862b55d3094d67827e85803f3cb490191f892e4bebbbb0420715e7b102a3ca5ce878314a201b0684bb0b2d05d0b913d306462b1ba217726e4ab986e20c66f7f7270b68118369a6622862cabfdc30f7a8617444af44618802cc5664f69919736bad374b12515e4a878d5ef3db2c3a355916bc5cf89a0e317bc61326b77d80ac3886e823d700b9f5bc34a18a93c4200b736f14063978738b34b33df79",
+    "strategies": [
+      "jwt"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    }
+  }
 }
