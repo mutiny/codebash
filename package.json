@@ -24,13 +24,17 @@
     "yarn": ">= 0.18.0"
   },
   "scripts": {
+    "build": "webpack",
     "test": "yarn run standard --env mocha && yarn run mocha",
     "lint": "yarn run standard --fix --env mocha ",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
     "eslint": "^3.19.0",
@@ -48,18 +52,22 @@
     "feathers-rest": "^1.7.2",
     "feathers-socketio": "^1.6.0",
     "helmet": "^3.5.0",
+    "jquery": "^3.2.1",
     "mocha": "^3.3.0",
     "mongodb": "^2.2.26",
     "request": "^2.81.0",
     "request-promise": "^4.2.0",
     "serve-favicon": "^2.4.2",
+    "webpack": "^2.4.1",
     "winston": "^2.3.1"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.4.0",
     "standard": "^10.0.2"
   },
   "standard": {
     "env": [
+      "jquery",
       "mocha",
       "node",
       "es6"
