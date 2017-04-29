@@ -18,7 +18,7 @@
       "header": {
         "type": "access"
       },
-      "audience": "https://yourdomain.com",
+      "audience": "https://codeba.sh",
       "subject": "anonymous",
       "issuer": "feathers",
       "algorithm": "HS256",
