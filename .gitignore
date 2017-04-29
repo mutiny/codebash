@@ -1,5 +1,6 @@
 # Compiled application
 app
+public/app.js
 
 # Logs
 logs

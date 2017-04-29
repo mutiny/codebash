@@ -1,1 +1,2 @@
-$(document).ready(() => alert('It worked!'))
+/** eslint-env jquery, browser */
+$(document).ready(() => {})

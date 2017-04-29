@@ -37,8 +37,12 @@ app.use('/', feathers.static(app.get('public')))
 app.configure(hooks())
 app.configure(mongodb)
 app.configure(rest())
-app.configure(socketio())
-
+app.configure(socketio(io => {
+  io.on('connection', socket => {
+    socket.emit('news', { text: 'Client connected.' })
+    console.log('Client connected')
+  })
+}))
 app.configure(authentication)
 
 // Set up our services (see `services/index.js`)
