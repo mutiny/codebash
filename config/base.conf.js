@@ -1,1 +1,6 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+module.exports = {
+  /** General */
+  'env': process.env.NODE_ENV || 'development',
+  /** MongoDB */
+  'dbURL': 'mongodb://localhost/codebash'
+}

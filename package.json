@@ -2,17 +2,22 @@
   "name": "codebash",
   "version": "0.1",
   "description": "a real-time interactive coding experience",
-  "main": "app",
+  "main": "app/app.js",
   "repository": "https://github.com/mutiny/codebash",
   "author": "Robin Ury <r.ury@tuta.io>",
   "license": "AGPL-3.0",
   "dependencies": {
     "chokidar": "^1.6.1",
     "express": "^4.15.2",
-    "jquery-slim": "^3.0.0"
+    "jquery-slim": "^3.0.0",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.6"
   },
   "scripts": {
+    "dbup" : "mongod data --port 31337 --fork --logpath log",
+    "dbdown" : "mongo admin --eval 'db.shutdownServer()",
     "dev": "webpack-dev-server --inline --hot",
+    "start": "node app/app.js",
     "build": "node_modules/.bin/webpack"
   },
   "devDependencies": {
