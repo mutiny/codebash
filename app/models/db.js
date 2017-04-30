@@ -1,14 +1,20 @@
 const URL = require('../../config/base.conf').dbURL
-const mongoose = require('mongoose')
+const Mongoose = require('mongoose')
+
+/** Schema */
+require('./challenges')
+require('./teams')
+require('./users')
+
 var gracefulShutdown
 
-mongoose.connect(URL)
-const db = mongoose.connection
+Mongoose.connect(URL)
+const db = Mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', () => console.log('Connected to DB'))
 
 gracefulShutdown = function (msg, callback) {
-  mongoose.connection.close(function () {
+  Mongoose.connection.close(function () {
     console.log('Mongoose disconnected through ' + msg)
     callback()
   })
