@@ -8,6 +8,7 @@
 #### [sugarss](https://github.com/postcss/sugarss)
 
 ## Webpack
+### [devServer](https://webpack.js.org/configuration/dev-server/#devserver)
 ### [List of loaders](https://github.com/webpack-contrib/awesome-webpack#loaders/)
 ### Our loaders
 - [file-loader](https://github.com/webpack-contrib/file-loader)

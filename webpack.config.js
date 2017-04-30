@@ -1,10 +1,18 @@
 const webpack = require('webpack')
 var Uglify = webpack.optimize.UglifyJsPlugin
+const path = require('path')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/index.js',
+    'webpack-dev-server/client?http://localhost8080',
+    'webpack/hot/only-dev-server'
+  ],
   output: {
-    filename: './www/bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    // ??? needed for HMR (also devServer.publicPath)
+    publicPath: '/'
   },
   module: {
     loaders: [
@@ -13,7 +21,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['env']
+          presets: ['es2015']
         }
       },
       {
@@ -42,6 +50,17 @@ module.exports = {
       $: 'jQuery-slim',
       jQuery: 'jquery-slim',
       'window.jQuery': 'jquery'
-    })
-  ]
+    }),
+    // HMR
+    new webpack.HotModuleReplacementPlugin(),
+    // Provides readable module names in browser
+    new webpack.NamedModulesPlugin()
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    publicPath: '/',
+    compress: true,
+    hot: true,
+    port: 9000
+  }
 }
