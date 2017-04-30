@@ -8,9 +8,7 @@ var UserSchema = new Schema({
     unique: true,
     required: true
   },
-  password: {type: String, required: true},
-  name: {type: String, required: true},
-  nethandle: {type: String, required: true}
+  password: {type: String, required: true}
 })
 
 // Hash the user's password before inserting a new user

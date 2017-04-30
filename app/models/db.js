@@ -1,11 +1,11 @@
-const URL = require('../../config/base.conf').dbURL
+const URL = require('../../config/base.conf').database.local // TODO env logic
 const Mongoose = require('mongoose')
 
-/** Schema */
+/** Schema
 require('./challenges')
 require('./teams')
 require('./users')
-
+*/
 var gracefulShutdown
 
 Mongoose.connect(URL)

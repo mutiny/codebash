@@ -2,8 +2,8 @@ var express = require('express')
 var router = express.Router()
 let passport = require('passport')
 let jwt = require('jsonwebtoken')
-var User = require('../models/User')
-let config = require('../config')
+var User = require('../models/users')
+let config = require('../../config/base.conf')
 
 // Register new users
 router.post('/register', function (req, res) {
@@ -21,6 +21,7 @@ router.post('/register', function (req, res) {
     // Attempt to save the user
     newUser.save(function (err) {
       if (err) {
+        console.log(err)
         return res.json({
           success: false,
           message: 'That email address already exists.'
